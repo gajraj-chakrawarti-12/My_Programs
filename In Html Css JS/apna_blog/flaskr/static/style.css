@@ -1,0 +1,178 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    display: flex;
+    background-color: cyan;
+}
+
+.headerdiv {
+    width: 50%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+#headerdiv1 {
+    justify-content: right;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+}
+
+#connectLink {
+    mix-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+    height: auto;
+    position: fixed;
+    right: 0px;
+    top: 25%;
+}
+
+.img {
+    height: 30px;
+    object-fit: contain;
+}
+
+#posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.posts,
+.content {
+    width: 85%;
+}
+
+.content>header {
+    background-color: rgb(150, 188, 253);
+    color: rgb(0, 0, 0);
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+article {
+    background-color: rgb(216, 235, 111);
+    padding: 10px;
+    margin: 7.5px;
+    border: 3px solid black;
+    border-radius: 15px;
+}
+
+#from,
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    gap: 10px;
+    background-color: rgb(216, 235, 111);
+    width: 300px;
+    padding: 12px 0px;
+    margin: 15px;
+    border: 3px solid black;
+    border-radius: 7.5px;
+}
+
+#form {
+    width: 450px;
+    height: 350px;
+    flex-direction: row;
+    gap: 5px;
+    margin-bottom: 40px;
+}
+
+#button {
+    height: 30px;
+    width: 60px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.div1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 170px;
+    gap: 10px;
+    margin: 10px 10px;
+}
+
+input {
+    height: 20px;
+    padding: 3px;
+    border: 1px solid black;
+}
+
+button {
+    height: 35px;
+    width: 80px;
+    font-size: 15px;
+    margin: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    height: 24px;
+}
+
+#footerdiv {
+    display: flex;
+    justify-content: center;
+    color: azure;
+    align-items: center;
+}
+
+#github {
+    height: 20px;
+    padding: 2px 5px;
+}
+
+#someoperation {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+textarea {
+    width: 250px;
+    height: 170px;
+    padding: 5px;
+}
+.new{
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color: rgb(252, 244, 170);
+    height: 45px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 7.5px;
+    top: 0px;
+    right: 0%;
+}
+.new>a{
+    text-decoration: none;
+}

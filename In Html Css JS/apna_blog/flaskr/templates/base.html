@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% if name %} <title> {{ name }} </title> {% else %} <title>Apna Blog</title> {% endif %}
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+  <header id="header">
+    <div class="headerdiv">
+      {% if name %} <h1> {{ name }} </h1> {% else %} <h1>Apna Blog</h1> {% endif %}
+    </div>
+    <div class="headerdiv" id="headerdiv1">
+      {% if g.user %}
+      <object>{{ g.user['username'] }}</object>
+      <a href="{{ url_for('auth.logout') }}">Log Out</a>
+      {% else %}
+      <a href="/auth/register">Register</a>
+      <a href="/auth/login">Log In</a>
+      {% endif %}
+    </div>
+  </header>
+  {% if g.user %}
+  <div class="new"> <a class="action" href="{{ url_for('blog.create') }}">New<br>Post</a></div>
+  {% endif %}
+  <div id="connectLink">
+    <a href="https://www.instagram.com/gajraj_chakrawarti_12/"><img src="{{url_for('static',filename='instagram.png')}}"
+        alt="instagram" id="instagram" class="img"></a>
+    <a href="https://www.facebook.com/gajrajchakrawarti12"><img src="{{url_for('static',filename='facebook.png')}}"
+        alt="facebook" id="facebook" class="img"></a>
+    <a href="https://wa.me/qr/HBXBMXPYCLECN1"><img src="{{url_for('static',filename='whatsapp.png')}}" alt="whatsapp"
+        id="whatsapp" class="img"></a>
+    <a href="https://github.com/gajraj-chakrawarti-12"><img src="{{url_for('static',filename='github.png')}}"
+        alt="github" class="img"></a>
+    <a href="https://www.linkedin.com/in/gajraj-chakrawarti-356298297"><img
+        src="{{url_for('static',filename='linkedin.png')}}" alt="linkedin" id="linkedin" class="img"></a>
+    <a href="https://www.snapchat.com/add/chakravarti6687?share_id=ePaXTK3In34&locale=en-US"><img
+        src="{{url_for('static',filename='snapchat.png')}}" alt="snapchat" id="snapchat" class="img"></a>
+  </div>
+  <div id="posts">
+    <section class="content">
+      <header>
+        {% block header %}{% endblock %}
+      </header>
+      {% for message in get_flashed_messages() %}
+      <div class="flash">{{ message }}</div>
+      {% endfor %}
+      {% block content %}{% endblock %}
+    </section>
+  </div>
+  <footer>
+    <div id="footerdiv">
+      <p>Created by </p><img src="{{url_for('static',filename='github.png')}}" alt="github" id="github">
+      <p>@gajraj-chakrawarti-12</p>
+    </div>
+  </footer>
+</body>
+</html>
